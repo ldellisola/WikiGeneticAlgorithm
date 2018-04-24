@@ -56,6 +56,19 @@ void Individual::calculateFitnessV1(const char * perfect)
 	}
 }
 
+void Individual::calculateFitnessV3(const char * perfect)
+{
+	fitness = 0;
+	int size = genome.size();
+	for (int i = 0; i < size; i++) {
+		if (genome[i] == perfect[i]) {
+			fitness += 1;
+			fitness += fitness * fitness;
+		}
+	}
+
+}
+
 void Individual::calculateFitnessV2(const char * perfect)
 {
 	fitness = 0;

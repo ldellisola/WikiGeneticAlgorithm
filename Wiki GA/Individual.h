@@ -14,6 +14,7 @@ public:
 
 	void calculateFitnessV1(const char * perfect);
 	void calculateFitnessV2(const char * perfect);
+	void calculateFitnessV3(const char * perfect);
 	void Mutate();
 
 	void setGenome(string a);
