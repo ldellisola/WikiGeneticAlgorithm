@@ -9,6 +9,8 @@ void elitistSelection(vector<Individual>& vect) {
 		vect.pop_back();
 }
 
+
+
 void crossOverV1(vector<Individual>& vect) {
 	int size = vect.size();
 	for (int i = 0; (i + 1) <= size; i += 2) {
@@ -34,3 +36,35 @@ void crossOverV1(vector<Individual>& vect) {
 		vect.push_back(Individual(d));
 	}
 }
+
+//void probabilisticSelection(vector<Individual>& pop)
+//{
+//	int size = pop.size();
+//
+//
+//	vector<float> relativeFitness;
+//	vector<Individual>father;
+//
+//	float fitnessSum = 0;
+//
+//	for (Individual& ind : pop) 
+//		fitnessSum += ind.getFitness();
+//
+//	for (int i = 0; i < size; i++)
+//		relativeFitness.push_back(pop[i].getFitness()/fitnessSum );
+//
+//	for (int i = 0; i < size; i++) {
+//		if (((rand() % 1000) / 1000) > relativeFitness[i])
+//			father.push_back(pop[i]);
+//	}
+//
+//	if (father.size() > size / 2)
+//		for (int i = father.size(); i > size / 2; i++)
+//			father.pop_back();
+//	else if (father.size() > size / 2)
+//		for (int i =)
+//
+//
+//
+//
+//}
